@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: talhafarooqpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: talhafarooqpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: talhafarooqpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: talhafarooqpipelinesjavascriptdocker 
+          image: mycontainerregistryy.azurecr.io/talhafarooqpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
